@@ -26,5 +26,6 @@ int main(){
     }
     sort(v.begin(), v.end(), cmp);
     for(int i=0; i< t; i++) cout << v[i].name << '\n';
+ 
     return 0;
 }
