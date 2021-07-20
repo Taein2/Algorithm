@@ -19,8 +19,7 @@ void f(int index){
             queen[index] = i;
             if(promising(index)) f(index+1);
         }
-    }
-    
+    }   
 }
 int main(){
     ios::sync_with_stdio(false);
