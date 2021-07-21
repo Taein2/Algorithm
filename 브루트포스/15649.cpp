@@ -10,6 +10,7 @@ void f(int index, int n, int m){
             if(i != m-1) cout << " ";
         }
         cout << "\n";
+        return;
     }
     for(int i=1; i<=n ; i++){
         if(c[i]) continue;
