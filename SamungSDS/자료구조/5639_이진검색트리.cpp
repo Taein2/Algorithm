@@ -2,7 +2,8 @@
 
 using namespace std;
 typedef struct node{
-    int left; int right;
+    int left = 0; 
+    int right = 0;
 }node;
 node arr[10001];
 void postorder(int root){
@@ -18,24 +19,25 @@ int main(){
     cin >> root;
     int n;
     while(cin >> n){
-        int new_root = root;
-        while(true){
-            if(n > new_root){
-                if(!arr[new_root].right){
-                    arr[new_root].right = n;
-                    break;
+        int current_node = root;
+        while(1){
+            if(n < current_node){
+                if(arr[current_node].left != 0){
+                    current_node = arr[current_node].left;
                 }else{
-                    root = arr[new_root].right;
+                    arr[current_node].left = n;
+                    break;
                 }
             }
             else{
-                if(!arr[new_root].left){
-                    arr[new_root].left = n;
-                    break;
+                if(arr[current_node].right != 0){
+                    root = arr[current_node].right;
                 }else{
-                    new_root = arr[new_root].left;
+                    arr[current_node].right = n;
+                    break;
                 }
             }
+
         }
     }
     postorder(root);
