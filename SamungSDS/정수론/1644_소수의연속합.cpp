@@ -3,10 +3,12 @@
 #include <string>
 #include <vector>
 using namespace std;
+
 bool check[4000001];
 vector<int> prime;
 int n;
 int result = 0, sum = 0, lo = 0, hi = 0;
+
 int main() {
     for (int i = 2; i < 4000001; i++) {
         if (!check[i]) {
