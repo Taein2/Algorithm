@@ -48,5 +48,4 @@ int main(){
          cout << res.t << '\n';      
       }
    } 
-      
 }
