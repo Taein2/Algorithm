@@ -10,9 +10,9 @@ int find(int node) {
         return root[node] = find(root[node]);
 }
 void uni(int a, int b){
-    int u = find(a);
-    int v = find(b);
-    root[u] = v;
+    int pa = find(a);
+    int pb = find(b);
+    root[pb] = pa;
 }
 int main(){
     ios::sync_with_stdio(false);
