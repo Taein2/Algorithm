@@ -46,7 +46,7 @@ int main(){
                 x_r = v[i].second;
                 exist_x = true;
             }
-            if(i == v.size()-1){
+            if(i == v.size()-1 && exist_x && exist_y){
                 if(x_r <= y_r && max_r < x_r){
                     if(cnt == diff){
                         cout << "true" << "\n";
