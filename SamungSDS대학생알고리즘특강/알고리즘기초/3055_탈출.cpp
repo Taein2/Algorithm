@@ -13,7 +13,7 @@ void bfs(){
 	int result = 0;
 	while (!start.empty()) {
 		result++;
-		int water_size = water.size();
+		int water_size = water.size(); 
 		while (water_size--) {
 			int x = water.front().first;
 			int y = water.front().second;
@@ -53,7 +53,7 @@ void bfs(){
 			}
 		}
 	}
-	cout << "KAKTUS" << endl;
+	cout << "KAKTUS" << "\n";
 	return;
 }int main(){
     ios::sync_with_stdio(false);
